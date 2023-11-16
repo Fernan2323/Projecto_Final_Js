@@ -1,0 +1,101 @@
+body {
+  background: rgb(255, 149, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 149, 0, 1) 0%,
+    rgba(255, 0, 35, 1) 100%
+  );
+  font-family: sans-serif;
+  color: white;
+}
+main {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  margin: 100px auto 50px;
+  align-items: center;
+}
+
+.seccionUno {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0 50px 50px 50px;
+  border-radius: 8px;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+button {
+  height: 140px;
+  width: 120px;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  border: 2px solid rgb(241, 116, 13);
+  border-radius: 8px;
+}
+button:hover {
+  cursor: pointer;
+  border: 5px solid rgb(255, 0, 0);
+}
+.seccionDos {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 250px;
+  height: 400px;
+  padding: 40px 20px;
+  margin-top: 10px;
+}
+
+.estadisticas {
+  border: 1px solid white;
+  height: 90px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+footer {
+  text-align: center;
+}
+span {
+  font-size: 1.3rem;
+}
+img {
+  width: 80%;
+}
+
+.raichu-img {
+  width: 500px;
+  height: 500px;
+  animation: raichuAnimate 4s linear infinite;
+}
+
+@keyframes raichuAnimate {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+ 
+
+.divElement{
+  z-index: 1;
+  background-color: rgb(240, 70, 3);
+  color:white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid;
+  text-align: center;
+  
+}
