@@ -6,7 +6,7 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let tiempo = false;
-let cronometro = 4;
+let cronometro = 40;
 let cronometroInicial = cronometro;
 let pararTiempo = null;
 
