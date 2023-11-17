@@ -13,7 +13,7 @@ let pararTiempo = null;
 let mostrarMovimientos = document.querySelector("#movimientos");
 let mostrarAciertos = document.querySelector("#aciertos");
 let mostrarTiempo = document.querySelector("#tiempoRestante");
-let ventanaResultados = document.querySelector('main');
+let ventanaResultados = document.querySelector("main");
 
 let numeros = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numeros = numeros.sort(() => {
@@ -41,20 +41,35 @@ function bloquearCartas() {
 }
 
 //Falta hacer correciones en el css
-/* function crearElemento() {
-  let divElement = document.createElement('div');
-  divElement.classList.add('divElement'); 
-  divElement.innerHTML = `<h2>Fin del juego</h2>
+function crearElemento() {
+  let divElement = document.createElement("div");
+  divElement.classList.add("divElement");
+  divElement.innerHTML = `<h2>Perdiste!💀​</h2>
                           <p>Aciertos: ${aciertos}</p>
                            <p>Demoraste: ${
-                            cronometroInicial - cronometro  
-                          } segundos</p>
-                          <p>Movimientos: ${movimientos}`;
-  
-  
-  ventanaResultados.appendChild(divElement);
-} */
+                             cronometroInicial - cronometro
+                           } segundos</p>
+                          <p>Movimientos: ${movimientos}
+                          <p><a href="../game.html">Click aquí para jugar de nuevo</a></p>
+                          <p><a href="../index.html">Click aquí para volver al inicio</a></p> `;
 
+  ventanaResultados.appendChild(divElement);
+}
+
+function crearElementoDos() {
+  let divElement = document.createElement("div");
+  divElement.classList.add("divElement");
+  divElement.innerHTML = `<h2>Enhorabuena!😎​</h2>
+                          <p>Aciertos: ${aciertos}</p>
+                           <p>Demoraste: ${
+                             cronometroInicial - cronometro
+                           } segundos</p>
+                          <p>Movimientos: ${movimientos}
+                          <p><a href="../game.html">Click aquí para jugar de nuevo</a></p>
+                          <p><a href="../index.html">Click aquí para volver al inicio</a></p>`;
+
+  ventanaResultados.appendChild(divElement);
+}
 
 function destapar(id) {
   cartasDestapadas++;
@@ -88,14 +103,9 @@ function destapar(id) {
       mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
 
       if (aciertos == 8) {
+        crearElementoDos();
         clearInterval(pararTiempo);
-        mostrarAciertos.innerHTML = `Aciertos: ${aciertos} Bien hecho!`;
-        mostrarTiempo.innerHTML = `Enhorabuena! demoraste ${
-          cronometroInicial - cronometro
-        } segundos`;
-        mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
       }
-      
     } else {
       setTimeout(() => {
         carta1.innerHTML = " ";
@@ -104,7 +114,6 @@ function destapar(id) {
         carta2.disabled = false;
         cartasDestapadas = 0;
       }, 800);
-      
     }
   }
 }
