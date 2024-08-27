@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokecartas</title>
+    <title>Pokememo</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/gameStyle.css">
 
 </head>
+
 <body>
+    <div class="container">
+
+        <header>
+            <h1>Pokememo</h1>
+        </header>
 
 
-    <main>
-        <div id="div-img">
-            <img class="raichu-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png" alt="raichu">
-        </div>
 
-        <section class="seccionUno">
-            <h1>Pokecartas</h1>
+        <main>
+            <div id="div-img">
+                <img class="raichu-img"
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png"
+                    alt="raichu">
+            </div>
 
-            <table>
-                <tr>
-                    <td><button id="0" onclick="destapar(0)" ></button></td>
-                    <td><button id="1" onclick="destapar(1)" ></button></td>
-                    <td><button id="2" onclick="destapar(2)" ></button></td>
-                    <td><button id="3" onclick="destapar(3)" ></button></td>
-                </tr>
-                <tr>
-                    <td><button id="4" onclick="destapar(4)" ></button></td>
-                    <td><button id="5" onclick="destapar(5)" ></button></td>
-                    <td><button id="6" onclick="destapar(6)" ></button></td>
-                    <td><button id="7" onclick="destapar(7)" ></button></td>
-                </tr>
-                <tr>
-                    <td><button id="8" onclick="destapar(8)" ></button></td>
-                    <td><button id="9" onclick="destapar(9)" ></button></td>
-                    <td><button id="10" onclick="destapar(10)" ></button></td>
-                    <td><button id="11" onclick="destapar(11)" ></button></td>
-                </tr>
-                <tr>
-                    <td><button id="12" onclick="destapar(12)" ></button></td>
-                    <td><button id="13" onclick="destapar(13)" ></button></td>
-                    <td><button id="14" onclick="destapar(14)" ></button></td>
-                    <td><button id="15" onclick="destapar(15)" ></button></td>
-                </tr>
-            </table>
-        </section>
+            <section class="seccionUno">
 
-        <section class="seccionDos playerContainer">
-            <h2 id="aciertos" class="estadisticas">Aciertos</h2>
-            <h2 id="tiempoRestante" class="estadisticas">Tiempo:</h2>
-            <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
 
-        </section>
-        <div id="div-img">
-            <img class="raichu-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png" alt="raichu">
-        </div>
-    </main>
-    <footer>
-        <p>
-            Desarrollado By Fernando Soria
-        </p>
-    </footer>
+                <table>
+                    <tr>
+                        <td><button id="0" onclick="destapar(0)"></button></td>
+                        <td><button id="1" onclick="destapar(1)"></button></td>
+                        <td><button id="2" onclick="destapar(2)"></button></td>
+                        <td><button id="3" onclick="destapar(3)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="4" onclick="destapar(4)"></button></td>
+                        <td><button id="5" onclick="destapar(5)"></button></td>
+                        <td><button id="6" onclick="destapar(6)"></button></td>
+                        <td><button id="7" onclick="destapar(7)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="8" onclick="destapar(8)"></button></td>
+                        <td><button id="9" onclick="destapar(9)"></button></td>
+                        <td><button id="10" onclick="destapar(10)"></button></td>
+                        <td><button id="11" onclick="destapar(11)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="12" onclick="destapar(12)"></button></td>
+                        <td><button id="13" onclick="destapar(13)"></button></td>
+                        <td><button id="14" onclick="destapar(14)"></button></td>
+                        <td><button id="15" onclick="destapar(15)"></button></td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="seccionDos playerContainer">
+                <h2 id="aciertos" class="estadisticas">Aciertos</h2>
+                <h2 id="tiempoRestante" class="estadisticas">Tiempo:</h2>
+                <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
+
+            </section>
+            <div id="div-img">
+                <img class="raichu-img"
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png"
+                    alt="raichu">
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                Developed By Fernando Soria
+            </p>
+        </footer>
+
+    </div>
+
+
+
 
     <script src="./js/game.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
+
 </html>

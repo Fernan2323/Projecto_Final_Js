@@ -81,3 +81,15 @@ footer {
   text-align: center;
   margin-top: -50px;
 }
+
+
+@media screen and (max-width: 938px) {
+
+  main{
+    flex-direction: column;
+  }
+  #div-img{
+    margin-top: 2rem;
+  }
+  
+}
