@@ -2,39 +2,68 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+
 }
-.container{
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+html{
+  height: 100%;
 }
 body {
+  min-height: 100%;
   background: rgb(255, 149, 0);
   background: radial-gradient(
     circle,
     rgba(255, 149, 0, 1) 0%,
     rgba(255, 0, 35, 1) 100%
   );
-  font-family: sans-serif;
+}
+.container{
+  display: grid;
+  grid-template-columns: 800px auto;
+  grid-template-rows: 100px auto 150px;
+  grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer" ;
+}
+.div-login{
+  display: grid;
+  gap: 1rem;
+}
+
+.header{
+  grid-area: header;
+
+}
+.main h1{
   color: white;
+  font-size: 2rem;
 }
-main {
-  display: flex;
-  justify-content: center;
-}
-section {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.main {
+ grid-area: main;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
   
 }
+
+.footer {
+  grid-area: footer;
+  background-color: rgba(5, 5, 5, 0.925);
+  padding: 2rem;
+   display: grid;
+   place-items: center; 
+   color: rgba(245, 243, 243, 0.555);
+}
+
 .submit {
   height: 25px;
   width: 70px;
   font-size: 1rem;
   border-radius: 5px;
+  margin-left: .5rem;
 }
 .submit:hover {
   background-color: rgb(165, 97, 42);
@@ -56,19 +85,10 @@ input {
   background-color: rgb(255, 149, 0) !important;
   border: 1px solid rgb(255, 149, 0) !important;
 }
-h1 {
-  font-size: 3.5rem;
-  text-align: center;
-  margin-top: 5rem;
-}
-#div-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 50px;
-}
+
+
 #img-pikachu {
-  width: 500px;
+  min-width: 500px;
   height: 500px;
   animation: pikachuAnimate 4s linear infinite;
 }
@@ -84,23 +104,14 @@ h1 {
     transform: translateY(20px);
   }
 }
-footer {
-  text-align: center;
-  background-color: rgba(5, 5, 5, 0.925);
-  padding: 2rem;
-}
 
 
-@media screen and (max-width: 938px) {
 
-  main{
+@media (max-width: 938px) {
+
+
+  .main {
     flex-direction: column;
-  }
-  #div-img{
-    margin-top: 2rem;
-  }
-  .form{
-    margin-top: 2rem;
-  }
   
+   }
 }

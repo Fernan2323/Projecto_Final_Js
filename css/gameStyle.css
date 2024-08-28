@@ -66,7 +66,7 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  height: 578px;
+  height: 571px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +126,7 @@ img {
     width: 90px;
   }
   .seccionDos{
-    height: 498px;
+    height: 490px;
   }
 }
 
@@ -143,7 +143,7 @@ img {
   }
 
   .seccionDos  {
-    height: 418px;
+    height: 410px;
   }
 
   .estadisticas{
@@ -170,7 +170,7 @@ img {
 }
 
 .seccionDos{
-  height: 330px;
+  height: 322px;
 }
 
 .estadisticas{
