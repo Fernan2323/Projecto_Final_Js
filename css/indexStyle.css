@@ -19,22 +19,17 @@ body {
 }
 .container{
   display: grid;
-  grid-template-columns: 800px auto;
-  grid-template-rows: 100px auto 150px;
-  grid-template-areas: 
-        "header header"
-        "main main"
-        "footer footer" ;
+  grid-template: 
+        "main main" auto
+        "footer footer" 150px /
+          auto   auto ;
 }
 .div-login{
   display: grid;
   gap: 1rem;
 }
 
-.header{
-  grid-area: header;
 
-}
 .main h1{
   color: white;
   font-size: 2rem;
@@ -46,18 +41,19 @@ body {
  justify-content: center;
  align-items: center;
  text-align: center;
+ flex-wrap: wrap;
   
 }
 
 .footer {
   grid-area: footer;
   background-color: rgba(5, 5, 5, 0.925);
+  color: rgba(196, 186, 186, 0.678);
   padding: 2rem;
-   display: grid;
-   place-items: center; 
-   color: rgba(245, 243, 243, 0.555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .submit {
   height: 25px;
   width: 70px;
@@ -88,8 +84,6 @@ input {
 
 
 #img-pikachu {
-  min-width: 500px;
-  height: 500px;
   animation: pikachuAnimate 4s linear infinite;
 }
 
@@ -110,8 +104,43 @@ input {
 @media (max-width: 938px) {
 
 
-  .main {
-    flex-direction: column;
-  
-   }
+  .container{
+    grid-template:
+      "main"
+      "footer";
+  }
 }
+
+@media (max-width: 855px) {
+
+  .div-login{
+   margin-top: 10rem;
+  }
+  #img-pikachu{
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 476px) {
+
+
+
+
+  .main h1{
+    font-size: 2rem;
+  }
+
+  .input {
+    width: 200px;
+    height: 5px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1rem;
+  }
+  
+
+  #img-pikachu{
+    width: 75%;
+  }
+}
+
